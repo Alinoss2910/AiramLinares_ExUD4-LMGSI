@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:annotation>
+  <xs:documentation xml:lang="Es-es">
+    Esquema pedidos examen
+    <fecha>14/02/2022</fecha>
+    <autor>Airam Linares Ossorio</autor>
+  </xs:documentation>
+</xs:annotation>
+    <xs:element name="pedidos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sucursal">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="pedido">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="NombreTrab" type="xs:string" />
+                                        <xs:element name="fechaPedido" type="xs:date" />
+                                        <xs:element name="observaciones" type="xs:string" />
+                                        <xs:element name="articulos" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="numeroUds" type="xs:string" />
+                                                    <xs:element name="precio" type="xs:string" />
+                                                    <xs:element name="obsevaciones" />
+                                                    <xs:element name="plazoRev" type="xs:string" />
+                                                </xs:sequence>
+                                                <xs:attribute name="codigo" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="codigo" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

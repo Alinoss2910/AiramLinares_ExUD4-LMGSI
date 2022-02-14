@@ -1,0 +1,16 @@
+<!DOCTYPE pedidos SYSTEM "pedidos.dtd">
+<pedidos>
+    <sucursal codigo="A0000000">
+        <pedido>
+            <NombreTrab>Airam</NombreTrab>
+            <fechaPedido>13-06-2022</fechaPedido>
+            <observaciones>Urgente</observaciones>
+            <articulos codigo="AAA-000">
+                <numeroUds>2</numeroUds>
+                <precio>15</precio>
+                <obsevaciones></obsevaciones>
+                <plazoRev>10</plazoRev>
+            </articulos>
+        </pedido>
+    </sucursal>
+</pedidos>
